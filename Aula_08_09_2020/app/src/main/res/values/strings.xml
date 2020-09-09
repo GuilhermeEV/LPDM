@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LemonPepper</string>
+    <string name="nome_restaurante">Lemon Pepper !</string>
+    <string name="mensagem_cozinheira">Observação do Pedido</string>
+    <string name="hint">Coloque aqui sua mensagem</string>
+</resources>
