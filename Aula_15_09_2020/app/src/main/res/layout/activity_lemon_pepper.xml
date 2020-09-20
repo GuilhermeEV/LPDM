@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LemonPepperActivity"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#5882FA"
+    >
+
+    <!-- Título do Restaurante -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome_restaurante"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="100px"/>
+
+    <!-- Botão de Consulta de Horas -->
+    <Button
+        android:id="@+id/horas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONSULTAR HORAS"
+        android:onClick="onClickTotalHoras"
+        android:background="#5FB404"/>
+
+    <!-- Texto Pedido -->
+    <TextView
+        android:id="@+id/pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <!-- Botão Registrar Pedido -->
+    <Button
+        android:id="@+id/registro_pedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOVO PEDIDO"
+        android:onClick="onClickRegistrarPedido"
+        android:background="#5FB404" />
+
+    <!-- Botão Observação do Pedido -->
+    <Button
+        android:id="@+id/mensagem_cozinha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5FB404"
+        android:onClick="onEnviarMensagemCozinha"
+        android:layout_marginTop="20dp"
+        android:text="@string/mensagem_cozinheira" />
+</LinearLayout>
