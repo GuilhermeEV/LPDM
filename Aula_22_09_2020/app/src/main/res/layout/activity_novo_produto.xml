@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NovoProdutoActivity">
+
+    <!--Nesse layout inserimos os dados para cadastrar um novo produto
+        Cada informação deve aparecer na mesma linha um textview com a descrição do campo
+         e ao lado um EditText para o usuario informar os dados. Todos os edits
+         devem exibir os hints para auxiliar o usuário.
+
+         Temos erros de código que não deixarão o APP funcionar como o esperado
+         ou que não é a melhor maneira de ser feita-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtIdProdutoNovo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_produto" />
+
+        <EditText
+            android:id="@+id/edtIdProdutoNovo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID Produto" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtProdutoNovo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_produto" />
+
+        <EditText
+            android:id="@+id/edtProdutoNovo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nome_produto" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtQtdNovo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qtd_produto" />
+
+        <EditText
+            android:id="@+id/edtQtdNovo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/hint_quantidade" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSalvarNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:onClick="onClickSalvar"/>
+
+</LinearLayout>
