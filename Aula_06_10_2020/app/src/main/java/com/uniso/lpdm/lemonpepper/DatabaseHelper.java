@@ -27,11 +27,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         atualizarBanco(db, oldVersion, newVersion);
     }
 
-    public static void insertBebida(SQLiteDatabase db, String nome, String descricao, int imagem_resource_id){
+    public static void insertBebida(SQLiteDatabase db, String nome, String descricao, double preco_unitario, int imagem_resource_id){
 
         ContentValues bebida = new ContentValues();
         bebida.put("nome", nome);
         bebida.put("descricao", descricao);
+        bebida.put("preco_unitario", preco_unitario);
         bebida.put("imagem_resource_id", imagem_resource_id);
         db.insert("BEBIDA", null, bebida);
     }
@@ -44,14 +45,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     "_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "nome TEXT, " +
                     "descricao TEXT, " +
+                    "preco_unitario REAL," +
                     "imagem_resource_id INTEGER" +
                     ");";
 
             db.execSQL(sql);
 
-            insertBebida(db, "CocaCola", "Uma Coca-Cola", R.drawable.coca);
-            insertBebida(db, "Guarana", "Um Guaraná", R.drawable.guarana);
-            insertBebida(db, "Fanta", "Uma Fanta Laranja", R.drawable.fanta);
+            insertBebida(db, "CocaCola", "Uma Coca-Cola", 5.00, R.drawable.coca);
+            insertBebida(db, "Guarana", "Um Guaraná", 4.00, R.drawable.guarana);
+            insertBebida(db, "Fanta", "Uma Fanta Laranja", 4.00, R.drawable.fanta);
         }
 
         if (oldVersion <= 2){
