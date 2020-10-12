@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NovoProdutoActivity">
+
+    <!--Nesse layout inserimos os dados para cadastrar um novo produto
+        Cada informação deve aparecer na mesma linha um textview com a descrição do campo
+         e ao lado um EditText para o usuario informar os dados. Todos os edits
+         devem exibir os hints para auxiliar o usuário.
+
+         Temos erros de código que não deixarão o APP funcionar como o esperado
+         ou que não é a melhor maneira de ser feita-->
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <Button
+        android:id="@+id/btnSalvarNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:onClick="onClickSalvar"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtQtdNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qtd_produto"
+        app:layout_constraintBottom_toTopOf="@+id/edtQtdNovo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtQtdNovo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:hint="@string/hint_quantidade"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnSalvarNovo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtProdutoNovo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_nome_produto"
+        app:layout_constraintBottom_toTopOf="@+id/txtQtdNovo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtIdProdutoNovo"
+        android:layout_width="358dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="12dp"
+        android:hint="ID Produto"
+        app:layout_constraintBottom_toTopOf="@+id/txtIdProdutoNovo"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtProdutoNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:text="@string/nome_produto"
+        app:layout_constraintBottom_toTopOf="@+id/txtIdProdutoNovo"
+        app:layout_constraintEnd_toStartOf="@+id/edtIdProdutoNovo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtIdProdutoNovo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome_produto"
+        app:layout_constraintBottom_toTopOf="@+id/edtProdutoNovo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
