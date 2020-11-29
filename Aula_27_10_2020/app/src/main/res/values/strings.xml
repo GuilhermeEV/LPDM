@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">LemonPepper</string>
+    <string name="nome_restaurante">Lemon Pepper !</string>
+    <string name="mensagem_cozinheira">Observação do Pedido</string>
+    <string name="hint">Coloque aqui sua mensagem</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="parar">Parar</string>
+    <string name="zerar">Zerar</string>
+    <string name="novo_produto">Novo</string>
+    <string name="atualizar_produto">Atualizar</string>
+    <string name="preencher_email">Enviar e-mail fornecedor</string>
+    <string name="endereco_fornecedor">E-mail fornecedor</string>
+    <string name="hint_endereco_fornecedor">Digite o endereço de email</string>
+    <string name="nome_produto">Produto</string>
+    <string name="hint_nome_produto">Digite o nome do produto em falta</string>
+    <string name="qtd_produto">Quantidade</string>
+    <string name="hint_quantidade">Digite a quantidade</string>
+    <string name="enviar_email">Enviar</string>
+    <string name="estoque">Estoque</string>
+    <string-array name="produtos">
+        <item>X-Bacon</item>
+        <item>X-Frango</item>
+        <item>X-Tudo</item>
+        <item>Porção Batata Frita</item>
+        <item>Porção Calabresa Frita</item>
+    </string-array>
+</resources>
